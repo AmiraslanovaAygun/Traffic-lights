@@ -1,0 +1,189 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-image: url("road.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: bodyAnimation 8s linear infinite;
+}
+
+.background-image {
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  top: 0px;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  margin: 50px auto;
+  margin-left: 60%;
+}
+
+.container img {
+  width: 200px;
+}
+
+.red {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0.8;
+  top: 25px;
+  left: 82px;
+  animation: redAnimation 3s linear;
+}
+
+.yellow {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid yellow;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0.8;
+  top: 63px;
+  left: 82px;
+  animation: yellowAnimation 2s linear 3s;
+}
+
+.green {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid green;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 0.8;
+  top: 101px;
+  left: 82px;
+  animation: greenAnimation 3s linear 5s;
+}
+
+@keyframes bodyAnimation {
+}
+
+@keyframes redAnimation {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: red;
+  }
+  86% {
+    background-color: black;
+  }
+  87% {
+    background-color: red;
+  }
+  89% {
+    background-color: black;
+  }
+  91% {
+    background-color: red;
+  }
+  93% {
+    background-color: black;
+  }
+  95% {
+    background-color: red;
+  }
+  97% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+@keyframes yellowAnimation {
+  0% {
+    background-color: yellow;
+  }
+  100% {
+    background-color: yellow;
+  }
+}
+
+@keyframes greenAnimation {
+  0% {
+    background-color: green;
+  }
+  85% {
+    background-color: green;
+  }
+  86% {
+    background-color: black;
+  }
+  87% {
+    background-color: green;
+  }
+  89% {
+    background-color: black;
+  }
+  91% {
+    background-color: green;
+  }
+  93% {
+    background-color: black;
+  }
+  95% {
+    background-color: green;
+  }
+  97% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
+}
+
+.car-container {
+  position: relative;
+  margin: -100px auto;
+  margin-left: 3%;
+  width: 300px;
+  animation: carAnimation 2s linear 6s;
+}
+.car-container img:first-child {
+  position: absolute;
+  transform: rotatey(180deg);
+}
+.wheel {
+  position: absolute;
+  width: 100px;
+  animation: wheelAnimation 2s linear 6s;
+}
+.wheel1 {
+  top: 100px;
+  left: 30px;
+}
+.wheel2 {
+  top: 100px;
+  left: 270px;
+}
+
+@keyframes wheelAnimation {
+  0% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes carAnimation {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(1500px);
+  }
+}
