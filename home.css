@@ -7,17 +7,6 @@ body {
   background-image: url("road.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  animation: bodyAnimation 8s linear infinite;
-}
-
-.background-image {
-  width: 100%;
-  height: 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: fixed;
-  top: 0px;
-  z-index: -1;
 }
 
 .container {
@@ -40,7 +29,7 @@ body {
   opacity: 0.8;
   top: 25px;
   left: 82px;
-  animation: redAnimation 3s linear;
+  animation: redAnimation 5s linear;
 }
 
 .yellow {
@@ -53,7 +42,7 @@ body {
   opacity: 0.8;
   top: 63px;
   left: 82px;
-  animation: yellowAnimation 2s linear 3s;
+  animation: yellowAnimation 2s linear 5s;
 }
 
 .green {
@@ -66,10 +55,7 @@ body {
   opacity: 0.8;
   top: 101px;
   left: 82px;
-  animation: greenAnimation 3s linear 5s;
-}
-
-@keyframes bodyAnimation {
+  animation: greenAnimation 5s linear 7s;
 }
 
 @keyframes redAnimation {
@@ -118,67 +104,80 @@ body {
   0% {
     background-color: green;
   }
-  85% {
-    background-color: green;
-  }
-  86% {
-    background-color: black;
-  }
-  87% {
-    background-color: green;
-  }
-  89% {
-    background-color: black;
-  }
-  91% {
-    background-color: green;
-  }
-  93% {
-    background-color: black;
-  }
-  95% {
-    background-color: green;
-  }
-  97% {
-    background-color: black;
-  }
   100% {
-    background-color: black;
+    background-color: green;
   }
 }
 
+/* ============================================================ */
 .car-container {
   position: relative;
   margin: -100px auto;
   margin-left: 3%;
   width: 300px;
-  animation: carAnimation 2s linear 6s;
+  animation: carAnimation 2s linear;
 }
+
 .car-container img:first-child {
   position: absolute;
   transform: rotatey(180deg);
 }
-.wheel {
+.div-wheel {
   position: absolute;
   width: 100px;
-  animation: wheelAnimation 2s linear 6s;
+  height: 100px;
+  border: 1px solid;
+  border-radius: 50%;
+  animation: wheelAnimation 2s linear;
 }
-.wheel1 {
-  top: 100px;
-  left: 30px;
-}
-.wheel2 {
-  top: 100px;
-  left: 270px;
-}
-
 @keyframes wheelAnimation {
-  0% {
-    transform: rotate(-360deg);
+  from {
+    transform: rotate(0px);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
 @keyframes carAnimation {
+  0% {
+    transform: translateX(-500px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.div-wheel1 {
+  top: 100px;
+  left: 30px;
+}
+.div-wheel2 {
+  top: 100px;
+  left: 270px;
+}
+
+.wheel {
+  width: 100px;
+  animation: wheel 5s linear 7s;
+}
+
+@keyframes wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.car {
+  animation: car 5s linear 7s;
+}
+
+@keyframes car {
   0% {
     transform: translateX(0px);
   }
