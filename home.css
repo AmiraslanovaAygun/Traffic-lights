@@ -30,7 +30,7 @@ body {
   opacity: 0.8;
   top: 25px;
   left: 82px;
-  animation: redAnimation 5s linear, redAnimation2 2s, redAnimation3 5s;
+  animation: redAnimation 5s linear;
 }
 
 @keyframes redAnimation {
@@ -66,7 +66,7 @@ body {
   }
 }
 
-@keyframes redAnimation2 {
+/* @keyframes redAnimation2 {
   from {
     background-color: black;
   }
@@ -81,7 +81,7 @@ body {
   to {
     background-color: black;
   }
-}
+} */
 
 .yellow {
   position: absolute;
@@ -93,8 +93,7 @@ body {
   opacity: 0.8;
   top: 63px;
   left: 82px;
-  animation: yellowAnimation 2s linear 5s, yellowAnimation2 5s,
-    yellowAnimation3 5s;
+  animation: yellowAnimation 2s linear 5s;
 }
 
 .green {
