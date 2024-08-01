@@ -4,6 +4,7 @@
 }
 
 body {
+  overflow: hidden;
   background-image: url("road.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -186,3 +187,28 @@ body {
     transform: translateX(1500px);
   }
 }
+/* --------------------------------------- */
+
+.boy-gif{
+  position: absolute;
+  width: 150px;
+  top: 220px;
+  left: 830px;
+  animation: boy 6s linear forwards;
+}
+
+@keyframes boy {
+
+0%{
+  transform: translatex(0px) translatey(0px);
+}
+20%{
+  transform: translatex(-120px) translatey(0px);
+}
+100%{
+  transform: translatex(-120px) translatey(400px);
+  display: none;
+}
+ 
+}
+
