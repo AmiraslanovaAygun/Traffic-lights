@@ -30,58 +30,35 @@ body {
   opacity: 0.8;
   top: 25px;
   left: 82px;
-  animation: redAnimation 5s linear;
+  animation: redAnimation 10s linear infinite;
 }
 
 @keyframes redAnimation {
   0% {
     background-color: red;
   }
-  50% {
+  30% {
     background-color: red;
   }
-  86% {
+  31% {
     background-color: black;
   }
-  87% {
+  32% {
     background-color: red;
   }
-  89% {
+  33% {
     background-color: black;
   }
-  91% {
+  34% {
     background-color: red;
   }
-  93% {
-    background-color: black;
-  }
-  95% {
-    background-color: red;
-  }
-  97% {
+  35% {
     background-color: black;
   }
   100% {
     background-color: black;
   }
 }
-
-/* @keyframes redAnimation2 {
-  from {
-    background-color: black;
-  }
-  to {
-    background-color: black;
-  }
-}
-@keyframes redAnimation3 {
-  from {
-    background-color: black;
-  }
-  to {
-    background-color: black;
-  }
-} */
 
 .yellow {
   position: absolute;
@@ -93,7 +70,28 @@ body {
   opacity: 0.8;
   top: 63px;
   left: 82px;
-  animation: yellowAnimation 2s linear 5s;
+  animation: yellowAnimation 10s linear infinite;
+}
+
+@keyframes yellowAnimation {
+  0% {
+    background-color: black;
+  }
+  35% {
+    background-color: black;
+  }
+  36% {
+    background-color: yellow;
+  }
+  55% {
+    background-color: yellow;
+  }
+  56% {
+    background-color: black;
+  }
+  100% {
+    background-color: black;
+  }
 }
 
 .green {
@@ -106,34 +104,32 @@ body {
   opacity: 0.8;
   top: 101px;
   left: 82px;
-  animation: greenAnimation 5s linear 7s;
+  animation: greenAnimation 10s linear infinite;
 }
 
-@keyframes yellowAnimation {
-  0% {
-    background-color: yellow;
-  }
-  100% {
-    background-color: yellow;
-  }
-}
+
 
 @keyframes greenAnimation {
   0% {
+    background-color: black;
+  }
+  55% {
+    background-color: black;
+  }
+  56% {
     background-color: green;
   }
   100% {
     background-color: green;
   }
 }
-
 /* ============================================================ */
 .car-container {
   position: relative;
   margin: -100px auto;
   margin-left: 3%;
   width: 300px;
-  animation: carAnimation 2s linear, car 5s linear 7s;
+  animation: carAnimation 10s linear infinite;
 }
 
 .car-container img:first-child {
@@ -145,16 +141,12 @@ body {
   0% {
     transform: translateX(-500px);
   }
-
-  100% {
+  10% {
     transform: translateX(0px);
   }
-}
-@keyframes car {
-  0% {
+  60% {
     transform: translateX(0px);
   }
-
   100% {
     transform: translateX(1500px);
   }
@@ -172,24 +164,23 @@ body {
 .wheel {
   position: absolute;
   width: 100px;
-  animation: wheelAnimation2 2s linear, wheelAnimation1 5s linear 7s;
+  animation: wheelAnimation 10s linear infinite;
 }
 
-@keyframes wheelAnimation1 {
-  from {
+@keyframes wheelAnimation {
+  0% {
     transform: rotate(0deg);
   }
-
-  to {
+  10% {
     transform: rotate(360deg);
   }
-}
-
-@keyframes wheelAnimation2 {
-  from {
-    transform: rotate(0px);
+  11% {
+    transform: rotate(0deg);
   }
-  to {
+  60%{
+    transform: rotate(0deg);
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -201,7 +192,7 @@ body {
   width: 150px;
   top: 220px;
   left: 830px;
-  animation: boy 6s linear forwards;
+  animation: boy 10s linear forwards infinite;
 }
 
 @keyframes boy {
@@ -212,7 +203,8 @@ body {
     transform: translatex(-120px) translatey(0px);
   }
   100% {
-    transform: translatex(-120px) translatey(400px);
+    transform: translatex(-120px) translatey(1400px);
     display: none;
   }
 }
+
